@@ -1,0 +1,61 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Learning Javascript&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+	&lt;/head&gt;
+
+	 &lt;body&gt;
+
+		&lt;p&gt;How many fingers are you holding up?&lt;/p&gt;
+
+		&lt;input id="myNumber" /&gt;
+
+		&lt;button id="guess"&gt;Guess!&lt;/button&gt;
+
+		&lt;script type="text/javascript"&gt;
+
+			document.getElementById("guess").onclick=function() {
+
+				var gotit=false; var guesses=1; var x;
+
+				while (gotit==false) {
+
+					x=Math.random();
+
+					x=6*x;
+
+					x=Math.floor(x);
+
+					if (document.getElementById("myNumber").value==x) {
+
+						gotit=true;
+
+					} else {
+
+						guesses++;
+						
+						if (guesses==5) {
+							break;
+						}
+
+					}
+
+				}
+
+				if (gotit) {
+					alert("Got it! It was a " + x + ". It only took me " + guesses + " guesses!");
+				} else {
+					alert("I gave up after " + guesses + " guesses.");
+				}
+
+			}
+
+		&lt;/script&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

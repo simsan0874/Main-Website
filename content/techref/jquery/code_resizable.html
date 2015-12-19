@@ -1,0 +1,48 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;jQuery Basics&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+
+		&lt;script src="http://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+		
+		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"&gt;&lt;/script&gt;
+		
+		&lt;link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" /&gt;
+
+		&lt;style&gt;
+		
+			#resizable { 
+				width: 150px; 
+				height: 150px; 
+				padding: 0.5em; 
+			}
+			
+			#resizable h3 { 
+				text-align: 
+				center; 
+				margin: 0; 
+			}
+			
+		&lt;/style&gt;
+		
+		&lt;script&gt;
+		
+			$(function() {
+				$( "#resizable" ).resizable();
+			});
+		
+		&lt;/script&gt;
+		
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div id="resizable" class="ui-widget-content"&gt;
+			&lt;h3 class="ui-widget-header"&gt;Resizable&lt;/h3&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

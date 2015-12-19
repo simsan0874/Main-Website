@@ -1,0 +1,43 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Learning Javascript&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+
+		&lt;button id="textChanger"&gt;Change first div text&lt;/button&gt;
+
+		&lt;div id="firstDiv"&gt;This is some text&lt;/div&gt;
+
+		&lt;button id="textAppender"&gt;Append some text&lt;/button&gt;
+
+		&lt;div id="secondDiv"&gt;Javascript is...&lt;/div&gt;
+
+		&lt;button id="textCreator"&gt;Create some text&lt;/button&gt;
+
+		&lt;div id="emptyDiv"&gt;&lt;/div&gt;
+
+		&lt;script type="text/javascript"&gt;
+
+			document.getElementById("textChanger").onclick=function() {
+				document.getElementById("firstDiv").innerHTML="This is awesome!";
+			}
+
+			document.getElementById("textAppender").onclick=function() {
+				document.getElementById("secondDiv").innerHTML=document.getElementById("secondDiv").innerHTML + "great!";
+			}
+
+			document.getElementById("textCreator").onclick=function() {
+				document.getElementById("emptyDiv").innerHTML="&lt;ul&gt;&lt;li&gt;Cat&lt;/li&gt;&lt;li&gt;Dog&lt;/li&gt;&lt;/ul&gt;";
+			}
+
+		&lt;/script&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

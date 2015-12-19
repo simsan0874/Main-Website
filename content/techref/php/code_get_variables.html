@@ -1,0 +1,34 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;My First Webpage&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div&gt;
+			&lt;?php
+
+				if ($_GET["submit"]) {
+
+					if ($_GET["name"]) {
+						echo "Your name is ".$_GET['name'];
+					} else {
+						echo "Please enter your name";
+					}
+
+				}
+
+			?&gt;
+			
+			&lt;form&gt;
+				&lt;label for="name"&gt;Name&lt;/label&gt;
+				&lt;input name="name" type="text" /&gt;
+				&lt;input type="submit" name="submit" value="Submit Your Name" /&gt;
+			&lt;/form&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

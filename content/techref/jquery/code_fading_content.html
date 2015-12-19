@@ -1,0 +1,39 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Learning jQuery&lt;/title&gt;
+
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+
+		&lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
+
+	&lt;/head&gt;
+
+	&lt;body&gt;
+
+		&lt;p&gt;This is some text.&lt;/p&gt;
+
+		&lt;button id="fader"&gt;Fade Out&lt;/button&gt;
+
+		&lt;button id="faderIn"&gt;Fade In&lt;/button&gt;
+
+		&lt;script&gt;
+
+			$("#fader").click(function() {
+				$("p").fadeOut("slow", function() {
+					alert("FadeOut complete!");
+				});
+			});
+
+			$("#faderIn").click(function() {
+				$("p").fadeIn();
+			});
+
+		&lt;/script&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

@@ -1,0 +1,33 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Learning Javascript&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+
+		&lt;p&gt;What is the weather?&lt;/p&gt;
+		&lt;input id="weather" /&gt;
+		&lt;button id="myButton"&gt;Submit&lt;/button&gt;
+
+		&lt;script type="text/javascript"&gt;
+
+			document.getElementById("myButton").onclick=function() {
+
+				if (document.getElementById("weather").value=="rain") {
+					alert ("it's raining");
+				} else {
+					alert("it's not raining!");
+				}
+
+			}
+
+		&lt;/script&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

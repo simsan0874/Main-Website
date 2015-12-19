@@ -1,0 +1,29 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;PHP Email&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div&gt;
+			&lt;?php
+					
+				$emailTo="andrewmsims0874@hotmail.com";
+				$subject="I hope this works!";
+				$body="I think you're great";
+				$headers="From: andrewmsims@hotmail.com";
+
+				if (mail($emailTo, $subject, $body, $headers)) {
+					echo "Mail sent successfully!";
+				} else {
+					echo "Mail not sent!";	
+				}
+					
+			?&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

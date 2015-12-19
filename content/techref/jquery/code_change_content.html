@@ -1,0 +1,44 @@
+<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Learning jQuery&lt;/title&gt;
+
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+
+		&lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
+
+		&lt;style&gt;
+
+			#circle {
+				width:200px;
+				height:200px;
+				background-color:green;
+				border-radius:100px;
+			}
+
+		&lt;/style&gt;
+
+	&lt;/head&gt;
+
+	&lt;body&gt;
+
+		&lt;div id="circle"&gt;&lt;/div&gt;
+
+		&lt;p&gt;This is some text&lt;/p&gt;
+
+		&lt;iframe src="http://www.cnn.com"&gt;&lt;/iframe&gt;
+
+		&lt;script&gt;
+
+			$("#circle").hover(function() {
+				$("iframe").attr("src", "http://www.ecowebhosting.co.uk");
+			});
+
+		&lt;/script&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>

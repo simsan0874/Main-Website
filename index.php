@@ -1,35 +1,6 @@
-<?php
+<?php include("include/login.php"); ?>
 
-	if ($_POST["submit"]) {
-
-		if (!$_POST['email']) {
-			$error.="<br />Please enter your email address";
-		}
-
-		if (!$_POST['comment']) {
-			$error.="<br />Please enter a comment";
-		}
-
-		if ($_POST['email'] != "" AND ! filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$error.="<br />Please enter a valid email address";
-		}
-
-		if ($error) {
-			$result='<div class="alert alert-danger"><strong>There were error(s) in your form:</strong>'.$error.'</div>';
-		} else {
-
-			if (mail("comments@andrewmsims0874.com", "Comment from website!", "Email: ".$_POST['email']."\nComment: ".$_POST['comment'])) {
-				$result='<div class="alert alert-success"><strong>Thank you!</strong> I appreciate the feedback.</div>';
-			} else {
-				$result='<div class="alert alert-danger">Sorry, there was an error sending your message. Please try again later.</div>';
-			}
-			
-		}
-
-	}
-
-?>
-
+<?php include("include/submit_comment.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,17 +49,15 @@
 						<li><a href="#detailsContainer">About Me</a></li>
 						<li><a href="#sitesContainer">The Sites</a></li>
 					</ul>
-					<!--
-					<form class="navbar-form navbar-right">
+					<form class="navbar-form navbar-right" method="post">
 						<div class="form-group">
-							<input type="email" placeholder="Email" class="form-control" />
+							<input type="email" name="loginemail" placeholder="Email" class="form-control" />
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="Password" class="form-control" />
+							<input type="password" name="loginpassword" placeholder="Password" class="form-control" />
 						</div>
-						<button type="submit" name="login" class="btn btn-success">Log In</button>
+						<button type="submit" name="submit" class="btn btn-success" value="Log In">Log In</button>
 					</form>
-					-->
 				</div>
 				
 			</div>
@@ -99,6 +68,8 @@
 			
 				<div class="col-md-6 col-md-offset-3" id="topRow">
 
+					<?php echo $loginresult; ?>
+			 
 					<div class="whiteBackground">
 					
 						<h1 class="marginTop">Sims.com</h1>
@@ -111,8 +82,8 @@
 						
 					</div>
 
-					<form method="post" class="marginTop marginBottom">
-						<?php echo $result; ?>
+					<form class="marginTop marginBottom" method="post">
+						<?php echo $commentresult; ?>
 						<div class="input-group">
 							<span class="input-group-addon">@</span>
 							<input type="email" class="form-control" name="email" placeholder="Your email" value="<?php echo $_POST['email']; ?>" />
@@ -121,7 +92,7 @@
 						<div class="form-group">
 							<textarea class="form-control" rows="5" name="comment" placeholder="Comments"><?php echo $_POST['comment']; ?></textarea>
 						</div>
-						<input type="submit" name="submit" class="btn btn-success btn-lg marginTop" />
+						<input type="submit" name="submit" class="btn btn-success btn-lg marginTop" value="Comment" />
 					</form>
 
 				</div>
